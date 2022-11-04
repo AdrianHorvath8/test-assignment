@@ -8,7 +8,7 @@ class Attribute(models.Model):
 class AttributeName(models.Model):
     nazev = models.CharField(max_length=150,null=True, blank=True )
     kod = models.CharField(max_length=150,null=True, blank=True )
-    zobraziť = models.BooleanField(default = True)
+    zobrazit = models.BooleanField(default = False)
 
 class AttributeValue(models.Model):
     hodnota = models.CharField(max_length=150,null=True, blank=True )

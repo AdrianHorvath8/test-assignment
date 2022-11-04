@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import ProductAttributes, Attribute, AttributeName, AttributeValue
 
-# Register your models here.
+admin.site.register(ProductAttributes)
+admin.site.register(Attribute)
+admin.site.register(AttributeName)
+admin.site.register(AttributeValue)

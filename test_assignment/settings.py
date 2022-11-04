@@ -41,6 +41,8 @@ INSTALLED_APPS = [
 
     "product.apps.ProductConfig",
     "attribute.apps.AttributeConfig",
+    "api.apps.ApiConfig",
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
