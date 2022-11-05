@@ -1,14 +1,14 @@
-from django.shortcuts import render
-from rest_framework.decorators import api_view
 from attribute.models import Attribute, AttributeName, AttributeValue,ProductAttributes
+from django.shortcuts import render
 from product.models import Product, Catalog, Image, ProductImage
+from rest_framework.decorators import api_view
+from rest_framework import status
 from rest_framework.response import Response
 from .serializers import (
     AttributeSerializer, AttributeNameSerializer, AttributeValueSerializer,
     ProductAttributesSerializer, ProductSerializer, ProductImageSerializer,
     ImageSerializer, CatalogSerializer
     )
-from rest_framework import status
 import json
 
 
@@ -171,7 +171,6 @@ def import_data(request):
                 except:
                     return Response(status=status.HTTP_400_BAD_REQUEST)
 
-
     return Response(status=status.HTTP_200_OK)
 # tu sa nachadza views pre import dat z json filu
 
@@ -216,8 +215,6 @@ def all_data(request, model_name):
         return Response(status=status.HTTP_404_NOT_FOUND)
 
 # tu sa nachadza views pre všetky data na zaklade nazvu modelu
-
-
 
 
 @api_view(["GET"])

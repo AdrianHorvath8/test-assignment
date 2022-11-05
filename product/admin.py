@@ -5,3 +5,5 @@ admin.site.register(Product)
 admin.site.register(Catalog)
 admin.site.register(Image)
 admin.site.register(ProductImage)
+
+# registrovanie do adminu

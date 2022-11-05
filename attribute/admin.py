@@ -5,3 +5,5 @@ admin.site.register(ProductAttributes)
 admin.site.register(Attribute)
 admin.site.register(AttributeName)
 admin.site.register(AttributeValue)
+
+# registrovanie do adminu

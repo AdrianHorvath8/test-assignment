@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.postgres.fields import ArrayField
 
+
 class Product(models.Model):
     nazev = models.CharField(max_length=150,null=True, blank=True )
     description = models.TextField(max_length = 500, null=True, blank=True)
@@ -19,6 +20,7 @@ class ProductImage(models.Model):
 class Image(models.Model):
     nazev = models.CharField(max_length=150,null=True, blank=True )
     obrazek = models.CharField(max_length=300,null=True, blank=True )
+
 
 class Catalog(models.Model):
     nazev = models.CharField(max_length=150,null=True, blank=True )

@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Attribute(models.Model):
     nazev_atributu_id = models.IntegerField(blank=True, null=True)
     hodnota_atributu_id = models.IntegerField(blank=True, null=True)
