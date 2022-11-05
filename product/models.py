@@ -4,7 +4,7 @@ from django.contrib.postgres.fields import ArrayField
 class Product(models.Model):
     nazev = models.CharField(max_length=150,null=True, blank=True )
     description = models.TextField(max_length = 500, null=True, blank=True)
-    cena = models.CharField(max_length=150,null=True, blank=True )
+    cena = models.FloatField(blank=True, null=True)
     mena = models.CharField(max_length=50,null=True, blank=True )
     published_on = models.CharField(max_length=200,null=True, blank=True )
     is_published = models.BooleanField(default=True)

@@ -10,6 +10,7 @@ class AttributeName(models.Model):
     kod = models.CharField(max_length=150,null=True, blank=True )
     zobrazit = models.BooleanField(default = False)
 
+
 class AttributeValue(models.Model):
     hodnota = models.CharField(max_length=150,null=True, blank=True )
 
