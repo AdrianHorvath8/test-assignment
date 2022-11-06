@@ -44,7 +44,7 @@ DATABASES = {
 * [Django REST framework](https://www.django-rest-framework.org/) - Used to web APIs
 * [PostgreSQL](https://www.postgresql.org/) - Database used
 * [PgAdmin](https://www.pgadmin.org/) - Used for managing database
-* [Postman](https://www.postman.com/) - Used to APIs documentation
+* [Postman](https://www.postman.com/) - Used for APIs documentation
 
 ## Features
 
