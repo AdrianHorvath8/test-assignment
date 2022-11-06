@@ -32,8 +32,8 @@ def get_routes(request):
         {"GET":"/api/detail/products"},
         {"GET":"/api/detail/products/id"},
 
-        {"GET":"/api/detail/productimages"},
-        {"GET":"/api/detail/productimages/id"},
+        {"GET":"/api/detail/product_images"},
+        {"GET":"/api/detail/product_images/id"},
 
         {"GET":"/api/detail/images"},
         {"GET":"/api/detail/images/id"},
@@ -197,7 +197,7 @@ def all_data(request, model_name):
         products = Product.objects.all()
         serializer = ProductSerializer(products, many = True)
     
-    if model_name == "productimages":
+    if model_name == "product_images":
         productimages = ProductImage.objects.all()
         serializer = ProductImageSerializer(productimages, many = True)
     
@@ -240,7 +240,7 @@ def data_by_id(request, pk, model_name):
         products = Product.objects.get(id=pk)
         serializer = ProductSerializer(products, many = False)
     
-    if model_name == "productimages":
+    if model_name == "product_images":
         productimages = ProductImage.objects.get(id=pk)
         serializer = ProductImageSerializer(productimages, many = False)
     
