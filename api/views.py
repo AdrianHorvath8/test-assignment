@@ -221,36 +221,60 @@ def all_data(request, model_name):
 def data_by_id(request, pk, model_name):
     
     if model_name == "attributes":
-        attributes = Attribute.objects.get(id=pk)
-        serializer = AttributeSerializer(attributes, many = False)
+        try:
+            attributes = Attribute.objects.get(id=pk)
+            serializer = AttributeSerializer(attributes, many = False)
+        except:
+            return Response(status=status.HTTP_404_NOT_FOUND)
 
-    if model_name == "attribute_names":
-        attribute_names = AttributeName.objects.get(id=pk)
-        serializer = AttributeNameSerializer(attribute_names, many = False)
+    if model_name == "attribute_names":  
+        try:
+            attribute_names = AttributeName.objects.get(id=pk)
+            serializer = AttributeNameSerializer(attribute_names, many = False)
+        except:
+            return Response(status=status.HTTP_404_NOT_FOUND)
 
     if model_name == "attribute_values":
-        attribute_values = AttributeValue.objects.get(id=pk)
-        serializer = AttributeValueSerializer(attribute_values, many = False)
+        try:
+            attribute_values = AttributeValue.objects.get(id=pk)
+            serializer = AttributeValueSerializer(attribute_values, many = False)
+        except:
+            return Response(status=status.HTTP_404_NOT_FOUND)
     
     if model_name == "product_attributes":
-        product_attributes = ProductAttributes.objects.get(id=pk)
-        serializer = ProductAttributesSerializer(product_attributes, many = False)
+        try:
+            product_attributes = ProductAttributes.objects.get(id=pk)
+            serializer = ProductAttributesSerializer(product_attributes, many = False)
+        except:
+            return Response(status=status.HTTP_404_NOT_FOUND)
     
     if model_name == "products":
-        products = Product.objects.get(id=pk)
-        serializer = ProductSerializer(products, many = False)
+        try:
+            products = Product.objects.get(id=pk)
+            serializer = ProductSerializer(products, many = False)
+        except:
+            return Response(status=status.HTTP_404_NOT_FOUND)
     
     if model_name == "product_images":
-        productimages = ProductImage.objects.get(id=pk)
-        serializer = ProductImageSerializer(productimages, many = False)
+        try:
+            productimages = ProductImage.objects.get(id=pk)
+            serializer = ProductImageSerializer(productimages, many = False)
+        except:
+            return Response(status=status.HTTP_404_NOT_FOUND)
     
     if model_name == "images":
-        images = Image.objects.get(id=pk)
-        serializer = ImageSerializer(images, many = False)
+        try:
+            images = Image.objects.get(id=pk)
+            serializer = ImageSerializer(images, many = False)
+        except:
+            return Response(status=status.HTTP_404_NOT_FOUND)
     
     if model_name == "catalogs":
-        catalogs = Catalog.objects.get(id=pk)
-        serializer = CatalogSerializer(catalogs, many = False)
+        try:
+            catalogs = Catalog.objects.get(id=pk)
+            serializer = CatalogSerializer(catalogs, many = False)
+        except:
+            return Response(status=status.HTTP_404_NOT_FOUND)
 
     try:
         return Response(serializer.data)
